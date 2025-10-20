@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /config/
+Disallow: /error/
+Disallow: /assets/js/image-protection.js
+
+Sitemap: https://robindeschain.es/sitemap.xml
