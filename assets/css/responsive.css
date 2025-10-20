@@ -1,0 +1,249 @@
+/* ====== RESPONSIVE STYLES ====== */
+
+/* Tablets (768px and down) */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--primary-white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 20px 0;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-item {
+        margin: 15px 0;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 0 20px;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    /* Featured Section */
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* About Preview */
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* About Section */
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Philosophy Section */
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Specialization Section */
+    .specialization-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    /* Portfolio Grid */
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    /* CTA Section */
+    .cta-title {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile Phones (480px and down) */
+@media screen and (max-width: 480px) {
+    /* Global */
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Navigation */
+    .nav {
+        padding: 20px;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 0 15px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 200px;
+    }
+    
+    /* Section Headers */
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Featured Section */
+    .featured {
+        padding: 60px 0;
+    }
+    
+    /* About Preview */
+    .about-preview {
+        padding: 60px 0;
+    }
+    
+    .specialization-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .specialization-item {
+        width: 100%;
+    }
+    
+    /* About Section */
+    .about {
+        padding: 60px 0;
+    }
+    
+    /* Philosophy Section */
+    .philosophy {
+        padding: 60px 0;
+    }
+    
+    .philosophy-item {
+        padding: 30px 15px;
+    }
+    
+    /* Specialization Section */
+    .specialization-section {
+        padding: 60px 0;
+    }
+    
+    /* Portfolio Filter */
+    .portfolio-filter {
+        padding: 30px 0;
+    }
+    
+    .filter-container {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+    
+    /* Portfolio Grid */
+    .portfolio-grid {
+        padding: 50px 0;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+        padding: 60px 0;
+    }
+    
+    .cta-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 40px 0;
+    }
+}
+
+/* Large Screens (1200px and up) */
+@media screen and (min-width: 1200px) {
+    /* Hero Section */
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    /* Section Headers */
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    /* Featured Section */
+    .featured-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Portfolio Grid */
+    .portfolio-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
