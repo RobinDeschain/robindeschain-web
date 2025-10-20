@@ -1,0 +1,45 @@
+# --- Forzar HTTPS y dominio sin www ---
+RewriteEngine On
+
+# Redirigir de www a dominio base
+RewriteCond %{HTTP_HOST} ^www\.robindeschain\.es [NC]
+RewriteRule ^(.*)$ https://robindeschain.es/$1 [L,R=301]
+
+# Forzar HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- Compresión y cache ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresDefault "access plus 3 days"
+</IfModule>
+
+# --- Evitar listado de directorios ---
+Options -Indexes
+
+# --- Redirigir errores 404 a tu página personalizada ---
+ErrorDocument 404 /error/404.html
+
+# --- Protección de imágenes (si usas image-protection.js) ---
+<FilesMatch "\.(jpe?g|png|gif|webp)$">
+  Header set Referrer-Policy "no-referrer-when-downgrade"
+</FilesMatch>
+
+# --- Seguridad básica ---
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-XSS-Protection "1; mode=block"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"

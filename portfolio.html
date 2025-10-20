@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Robin Deschain</title>
+    <meta name="description" content="Explora el portfolio de Robin Deschain, fotógrafo especializado en retratos y moda en Madrid">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/common/favicon.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/img/common/apple-touch-icon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/image-protection.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation (Igual que en index.html) -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/img/common/logo-black.svg" alt="Robin Deschain">
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">ACERCA DE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link active">PORTFOLIO</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">SERVICIOS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">CONTACTO</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">PORTFOLIO</h1>
+            <p class="page-subtitle">Retratos y Moda</p>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <!-- Menú de Navegación entre Galerías -->
+        <div class="portfolio-nav">
+            <div class="nav-container">
+                <button class="gallery-btn active" data-gallery="retratos">
+                    <span class="btn-text">Retratos</span>
+                </button>
+                <button class="gallery-btn" data-gallery="artistico">
+                    <span class="btn-text">Proyectos Artísticos</span>
+                </button>
+                <button class="gallery-btn" data-gallery="producto">
+                    <span class="btn-text">Fotografía de Producto</span>
+                </button>
+                <button class="gallery-btn" data-gallery="sesiones">
+                    <span class="btn-text">Sesiones de Clientes</span>
+                </button>
+            </div>
+        </div>
+        <!-- Contenedor de Galerías -->
+        <div class="galleries-container">
+            <!-- Galería 1: Retratos (Masonry) -->
+            <div class="gallery active" id="gallery-retratos">
+                <div class="masonry-grid">
+                    <div class="masonry-item tall">
+                        <img src="assets/img/thumbs/retratos/retrato-01.jpg" alt="Retrato expresivo" data-thumb="assets/img/thumbs/retratos/retrato-01.jpg" data-full="assets/img/portfolio/retratos/retrato-01-full.jpg">
+                    </div>
+                    <div class="masonry-item wide">
+                        <img src="assets/img/thumbs/retratos/retrato-02.jpg" alt="Retrato estudio" data-thumb="assets/img/thumbs/retratos/retrato-02.jpg" data-full="assets/img/portfolio/retratos/retrato-02-full.jpg">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="assets/img/thumbs/retratos/retrato-03.jpg" alt="Retrato natural" data-thumb="assets/img/thumbs/retratos/retrato-03.jpg" data-full="assets/img/portfolio/retratos/retrato-03-full.jpg">
+                    </div>
+                    <div class="masonry-item tall">
+                        <img src="assets/img/thumbs/retratos/retrato-04.jpg" alt="Retrato urbano" data-thumb="assets/img/thumbs/retratos/retrato-04.jpg" data-full="assets/img/portfolio/retratos/retrato-04-full.jpg">
+                    </div>
+                    <div class="masonry-item wide">
+                        <img src="assets/img/thumbs/retratos/retrato-05.jpg" alt="Retrato creativo" data-thumb="assets/img/thumbs/retratos/retrato-05.jpg" data-full="assets/img/portfolio/retratos/retrato-05-full.jpg">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="assets/img/thumbs/retratos/retrato-06.jpg" alt="Retrato profesional" data-thumb="assets/img/thumbs/retratos/retrato-06.jpg" data-full="assets/img/portfolio/retratos/retrato-06-full.jpg">
+                    </div>
+                    <div class="masonry-item tall">
+                        <img src="assets/img/thumbs/retratos/retrato-07.jpg" alt="Retrato artístico" data-thumb="assets/img/thumbs/retratos/retrato-07.jpg" data-full="assets/img/portfolio/retratos/retrato-07-full.jpg">
+                    </div>
+                    <div class="masonry-item wide">
+                        <img src="assets/img/thumbs/retratos/retrato-08.jpg" alt="Retrato emocional" data-thumb="assets/img/thumbs/retratos/retrato-08.jpg" data-full="assets/img/portfolio/retratos/retrato-08-full.jpg">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="assets/img/thumbs/retratos/retrato-09.jpg" alt="Retrato conceptual" data-thumb="assets/img/thumbs/retratos/retrato-09.jpg" data-full="assets/img/portfolio/retratos/retrato-09-full.jpg">
+                    </div>
+                    <div class="masonry-item tall">
+                        <img src="assets/img/thumbs/retratos/retrato-10.jpg" alt="Retrato conceptual" data-thumb="assets/img/thumbs/retratos/retrato-10.jpg" data-full="assets/img/portfolio/retratos/retrato-10-full.jpg">
+                    </div>
+                    <div class="masonry-item wide">
+                        <img src="assets/img/thumbs/retratos/retrato-11.jpg" alt="Retrato conceptual" data-thumb="assets/img/thumbs/retratos/retrato-11.jpg" data-full="assets/img/portfolio/retratos/retrato-11-full.jpg">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="assets/img/thumbs/retratos/retrato-12.jpg" alt="Retrato conceptual" data-thumb="assets/img/thumbs/retratos/retrato-12.jpg" data-full="assets/img/portfolio/retratos/retrato-12-full.jpg">
+                    </div>
+                    <div class="masonry-item tall">
+                        <img src="assets/img/thumbs/retratos/retrato-13.jpg" alt="Retrato conceptual" data-thumb="assets/img/thumbs/retratos/retrato-13.jpg" data-full="assets/img/portfolio/retratos/retrato-13-full.jpg">
+                    </div>
+                    <div class="masonry-item wide">
+                        <img src="assets/img/thumbs/retratos/retrato-14.jpg" alt="Retrato conceptual" data-thumb="assets/img/thumbs/retratos/retrato-14.jpg" data-full="assets/img/portfolio/retratos/retrato-14-full.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- Galería 2: Proyectos Artísticos (Tarjetas) -->
+            <div class="gallery" id="gallery-artistico">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/portfolio/artistico/proyecto-01.jpg" alt="Ventanas del Alma">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Ventanas del Alma</h3>
+                            <p class="project-description">Exploración de la identidad a través de metáforas arquitectónicas</p>
+                            <a href="#proyecto-ventanas" class="project-link">Ver proyecto</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/portfolio/artistico/proyecto-02.jpg" alt="Sombras y Luz">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Sombras y Luz</h3>
+                            <p class="project-description">Estudio sobre el contraste y la dualidad en el retrato contemporáneo</p>
+                            <a href="#proyecto-sombras" class="project-link">Ver proyecto</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/portfolio/artistico/proyecto-03.jpg" alt="Fragmentos de Tiempo">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Fragmentos de Tiempo</h3>
+                            <p class="project-description">Serie que captura momentos efímeros de la vida urbana</p>
+                            <a href="#proyecto-fragmentos" class="project-link">Ver proyecto</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/portfolio/artistico/proyecto-04.jpg" alt="Espejos Rotos">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Espejos Rotos</h3>
+                            <p class="project-description">Reflexiones sobre la identidad fragmentada en la sociedad moderna</p>
+                            <a href="#proyecto-espejos" class="project-link">Ver proyecto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Galería 3: Fotografía de Producto (Masonry - Unificada con Retratos) -->
+            <div class="gallery" id="gallery-producto">
+                <div class="masonry-grid">
+                    <div class="masonry-item tall">
+                        <img src="assets/img/portfolio/producto/cerveza-01.jpg" alt="Cerveza Artesanal" data-full="assets/img/portfolio/producto/cerveza-01-full.jpg">
+                    </div>
+                    <div class="masonry-item wide">
+                        <img src="assets/img/portfolio/producto/joyas-01.jpg" alt="Colección de Joyas" data-full="assets/img/portfolio/producto/joyas-01-full.jpg">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="assets/img/portfolio/producto/reloj-01.jpg" alt="Reloj de Lujo" data-full="assets/img/portfolio/producto/reloj-01-full.jpg">
+                    </div>
+                    <div class="masonry-item tall">
+                        <img src="assets/img/portfolio/producto/zapatos-01.jpg" alt="Zapatos de Diseño" data-full="assets/img/portfolio/producto/zapatos-01-full.jpg">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="assets/img/portfolio/producto/gafas-01.jpg" alt="Gafas de Sol" data-full="assets/img/portfolio/producto/gafas-01-full.jpg">
+                    </div>
+                    <div class="masonry-item wide">
+                        <img src="assets/img/portfolio/producto/bolso-01.jpg" alt="Bolso de Cuero" data-full="assets/img/portfolio/producto/bolso-01-full.jpg">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="assets/img/portfolio/producto/reloj-02.jpg" alt="Reloj Vintage" data-full="assets/img/portfolio/producto/reloj-02-full.jpg">
+                    </div>
+                    <div class="masonry-item tall">
+                        <img src="assets/img/portfolio/producto/camisa-01.jpg" alt="Camisa Elegante" data-full="assets/img/portfolio/producto/camisa-01-full.jpg">
+                    </div>
+                    <div class="masonry-item">
+                        <img src="assets/img/portfolio/producto/aneau-01.jpg" alt="Perfume de Lujo" data-full="assets/img/portfolio/producto/aneau-01-full.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- Galería 4: Sesiones de Clientes (Tarjetas - Unificadas con Proyectos Artísticos) -->
+            <div class="gallery" id="gallery-sesiones">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/portfolio/sesiones/sesion-maria-01.jpg" alt="Sesión María">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Sesión Corporativa - María</h3>
+                            <p class="project-description">Retratos profesionales para equipo de marketing</p>
+                            <button class="session-btn" data-session="maria">Ver sesión</button>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/portfolio/sesiones/sesion-juan-01.jpg" alt="Sesión Juan">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Sesión Personal - Juan</h3>
+                            <p class="project-description">Retratos artísticos en estudio</p>
+                            <button class="session-btn" data-session="juan">Ver sesión</button>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/img/portfolio/sesiones/sesion-startup-01.jpg" alt="Sesión Startup">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Sesión Startup - TechCorp</h3>
+                            <p class="project-description">Retratos de equipo para nueva empresa tecnológica</p>
+                            <button class="session-btn" data-session="startup">Ver sesión</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal Simple (para Retratos y Producto) -->
+    <div class="modal modal-simple" id="modal-simple">
+        <div class="modal-content">
+            <!-- Botón de cerrar minimalista -->
+            <button class="modal-close-nav" aria-label="Cerrar">
+                <span class="nav-text">Cerrar</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-image-container">
+                <img src="" alt="" class="modal-image">
+                <!-- Botones de navegación minimalistas -->
+                <button class="carousel-nav modal-prev" aria-label="Imagen anterior">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span class="nav-text">Prev</span>
+                </button>
+                <button class="carousel-nav modal-next" aria-label="Imagen siguiente">
+                    <span class="nav-text">Next</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Complejo (para Sesiones de Clientes) -->
+    <div class="modal modal-complex" id="modal-complex">
+        <div class="modal-content">
+            <!-- Botón de cerrar minimalista -->
+            <button class="modal-close-nav" aria-label="Cerrar">
+                <span class="nav-text">Cerrar</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="modal-session-container">
+                <!-- Izquierda: Visualizador de fotos -->
+                <div class="modal-visualizer">
+                    <img src="" alt="" class="modal-main-image">
+                    <!-- Botones de navegación minimalistas -->
+                    <button class="carousel-nav modal-prev" aria-label="Imagen anterior">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                        <span class="nav-text">Prev</span>
+                    </button>
+                    <button class="carousel-nav modal-next" aria-label="Imagen siguiente">
+                        <span class="nav-text">Next</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Derecha: Panel informativo -->
+                <div class="modal-info-panel">
+                    <h3 class="modal-session-title"></h3>
+                    <p class="modal-session-description"></p>
+                    <div class="modal-session-details"></div>
+                </div>
+            </div>
+            <!-- Inferior: Miniaturas -->
+            <div class="modal-thumbnails">
+                <div class="thumbnails-container"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Páginas de Proyectos Artísticos -->
+    <div class="project-page" id="proyecto-ventanas">
+        <div class="project-container">
+            <button class="back-to-portfolio">&larr; Volver al Portfolio</button>
+            <h1 class="project-page-title">Ventanas del Alma</h1>
+            <div class="project-page-content">
+                <div class="project-page-image">
+                    <img src="assets/img/portfolio/artistico/proyecto-01.jpg" alt="Ventanas del Alma">
+                </div>
+                <div class="project-page-text">
+                    <p>Esta serie explora la identidad humana a través de metáforas arquitectónicas. Cada retrato busca capturar no solo la apariencia física del sujeto, sino también las capas más profundas de su personalidad, como si miráramos a través de diferentes ventanas hacia su interior.</p>
+                    <p>El proyecto se desarrolló durante seis meses, trabajando con modelos de diversas edades y trasfondos culturales. Cada sesión fue una exploración colaborativa entre el fotógrafo y el sujeto, buscando momentos de autenticidad y vulnerabilidad.</p>
+                    <p>El resultado es una colección de imágenes que invitan a la reflexión sobre cómo nos presentamos al mundo y qué partes de nosotros mismos mantenemos ocultas tras las ventanas de nuestra apariencia externa.</p>
+                </div>
+            </div>
+            <!-- Galería del Proyecto con Modales -->
+            <div class="project-page-gallery">
+                <h2>Galería del Proyecto</h2>
+                <div class="project-gallery-grid">
+                    <div class="gallery-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-01-01.jpg" alt="Ventanas del Alma 1" data-full="assets/img/portfolio/artistico/proyecto-01-01-full.jpg">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-01-02.jpg" alt="Ventanas del Alma 2" data-full="assets/img/portfolio/artistico/proyecto-01-02-full.jpg">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-01-03.jpg" alt="Ventanas del Alma 3" data-full="assets/img/portfolio/artistico/proyecto-01-03-full.jpg">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-01-04.jpg" alt="Ventanas del Alma 4" data-full="assets/img/portfolio/artistico/proyecto-01-04-full.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- Sección Recomendados -->
+            <div class="recommended-section">
+                <h2>Proyectos Relacionados</h2>
+                <div class="recommended-grid">
+                    <div class="recommended-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-02.jpg" alt="Sombras y Luz">
+                        <h3>Sombras y Luz</h3>
+                        <p>Explora el contraste y la dualidad en el retrato contemporáneo</p>
+                        <a href="#proyecto-sombras" class="recommended-link">Ver proyecto</a>
+                    </div>
+                    <div class="recommended-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-04.jpg" alt="Espejos Rotos">
+                        <h3>Espejos Rotos</h3>
+                        <p>Reflexiones sobre la identidad fragmentada en la sociedad moderna</p>
+                        <a href="#proyecto-espejos" class="recommended-link">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Repetir para otros proyectos artísticos -->
+    <div class="project-page" id="proyecto-sombras">
+        <div class="project-container">
+            <button class="back-to-portfolio">&larr; Volver al Portfolio</button>
+            <h1 class="project-page-title">Sombras y Luz</h1>
+            <div class="project-page-content">
+                <div class="project-page-image">
+                    <img src="assets/img/portfolio/artistico/proyecto-02.jpg" alt="Sombras y Luz">
+                </div>
+                <div class="project-page-text">
+                    <p>Esta serie es un estudio profundo sobre el contraste y la dualidad que existe en cada individuo. A través del juego de luces y sombras, he buscado capturar no solo la apariencia externa, sino también las facetas ocultas que conforman la identidad completa de cada persona.</p>
+                    <p>Utilizando principalmente luz natural y composiciones cuidadosamente estudiadas, cada imagen representa un diálogo entre lo visible y lo invisible, entre lo que se muestra y lo que se esconde. Las sombras no son ausencia de luz, sino presencia de misterio.</p>
+                    <p>El resultado es una colección que invita a la contemplación y a la reflexión sobre la naturaleza dual de la existencia humana.</p>
+                </div>
+            </div>
+            <!-- Galería del Proyecto con Modales -->
+            <div class="project-page-gallery">
+                <h2>Galería del Proyecto</h2>
+                <div class="project-gallery-grid">
+                    <div class="gallery-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-02-01.jpg" alt="Sombras y Luz 1" data-full="assets/img/portfolio/artistico/proyecto-02-01-full.jpg">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-02-02.jpg" alt="Sombras y Luz 2" data-full="assets/img/portfolio/artistico/proyecto-02-02-full.jpg">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-02-03.jpg" alt="Sombras y Luz 3" data-full="assets/img/portfolio/artistico/proyecto-02-03-full.jpg">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-02-04.jpg" alt="Sombras y Luz 4" data-full="assets/img/portfolio/artistico/proyecto-02-04-full.jpg">
+                    </div>
+                </div>
+            </div>
+            <!-- Sección Recomendados -->
+            <div class="recommended-section">
+                <h2>Proyectos Relacionados</h2>
+                <div class="recommended-grid">
+                    <div class="recommended-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-01.jpg" alt="Ventanas del Alma">
+                        <h3>Ventanas del Alma</h3>
+                        <p>Exploración de la identidad a través de metáforas arquitectónicas</p>
+                        <a href="#proyecto-ventanas" class="recommended-link">Ver proyecto</a>
+                    </div>
+                    <div class="recommended-item">
+                        <img src="assets/img/portfolio/artistico/proyecto-03.jpg" alt="Fragmentos de Tiempo">
+                        <h3>Fragmentos de Tiempo</h3>
+                        <p>Serie que captura momentos efímeros de la vida urbana</p>
+                        <a href="#proyecto-fragmentos" class="recommended-link">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project-page" id="proyecto-fragmentos">
+        <!-- Estructura similar -->
+    </div>
+
+    <div class="project-page" id="proyecto-espejos">
+        <!-- Estructura similar -->
+    </div>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">¿INTERESADO EN UNA COLABORACIÓN?</h2>
+            <p class="cta-text">Si te gusta mi estilo y quieres trabajar juntos, no dudes en contactarme.</p>
+            <a href="contact.html" class="btn btn-primary">CONTACTAR</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Columna 1: Información Esencial -->
+                <div class="footer-column footer-info">
+                    <div class="footer-logo">
+                        <img src="assets/img/common/logo-white.svg" alt="Robin Deschain">
+                    </div>
+                    <p class="footer-description">
+                        Fotógrafo especializado en retratos y moda con esencia única en Madrid
+                    </p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:runnaway182@gmail.com">info@robindeschain.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+34644838479">+34 644 838 479</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Madrid, España</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna 2: Enlaces Rápidos -->
+                <div class="footer-column footer-links">
+                    <h3 class="footer-heading">Enlaces Rápidos</h3>
+                    <ul class="footer-nav">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="about.html">Acerca de</a></li>
+                        <li><a href="services.html">Servicios</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                    <ul class="footer-legal">
+                        <li><a href="legal/privacy-policy.html">Política de Privacidad</a></li>
+                        <li><a href="legal/terms-of-service.html">Términos de Servicio</a></li>
+                        <li><a href="sitemap.html">Mapa del Sitio</a></li>
+                    </ul>
+                </div>
+                <!-- Columna 3: Redes Sociales y Newsletter -->
+                <div class="footer-column footer-social">
+                    <h3 class="footer-heading">Conecta</h3>
+                    <div class="social-links">
+                        <a href="https://instagram.com/robindeschain" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/robindeschain" target="_blank" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://pinterest.com/robindeschain" target="_blank" class="social-link" aria-label="Pinterest">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/robindeschain" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div class="newsletter-section">
+                        <h4 class="newsletter-title">Mantente actualizado</h4>
+                        <p class="newsletter-subtitle">Recibe nuestras últimas noticias y proyectos</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <input type="email" class="newsletter-input" placeholder="Tu email" required>
+                            <button type="submit" class="newsletter-button">Suscribirse</button>
+                        </form>
+                        <div class="newsletter-message" id="newsletterMessage"></div>
+                    </div>
+                </div>
+                <!-- Columna 4: Contacto Directo -->
+                <div class="footer-column footer-cta">
+                    <h3 class="footer-heading">¿Listo para colaborar?</h3>
+                    <p class="cta-description">
+                        Si tienes un proyecto en mente o quieres conocer más sobre mis servicios, no dudes en contactarme.
+                    </p>
+                    <a href="contact.html" class="cta-button">
+                        Solicitar Presupuesto
+                    </a>
+                    <div class="footer-hours">
+                        <h4>Horario de Atención</h4>
+                        <p>Lunes a Viernes: 10:00 - 18:00</p>
+                        <p>Sábados: 10:00 - 14:00</p>
+                    </div>
+                    <div class="whatsapp-contact">
+                        <a href="https://wa.me/34644838479" target="_blank" class="whatsapp-link">
+                            <i class="fab fa-whatsapp"></i>
+                            Contactar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 Robin Deschain. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="legal/privacy-policy.html">Privacidad</a>
+                        <span>|</span>
+                        <a href="legal/terms-of-service.html">Términos</a>
+                        <span>|</span>
+                        <a href="legal/cookies-policy.html">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="dev-tools-protection" id="devToolsProtection">
+        <div>
+            <h2>Herramientas de Desarrollo Detectadas</h2>
+            <p>Por seguridad, esta página no puede ser inspeccionada mediante herramientas de desarrollo.</p>
+            <button onclick="location.reload()">Recargar Página</button>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/cookie-banner.js"></script>
+    <script src="assets/js/image-protection.js"></script>
+</body>
+
+</html>

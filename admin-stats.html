@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Estadísticas - Robin Deschain</title>
+    <meta name="description" content="Panel de administración y estadísticas del sitio web">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/image-protection.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="admin-nav">
+        <div class="admin-nav-container">
+            <a href="index.html" class="admin-nav-logo">
+                <img src="assets/img/common/logo-black.svg" alt="Robin Deschain">
+            </a>
+            <ul class="admin-nav-menu">
+                <li class="admin-nav-item">
+                    <a href="index.html" class="admin-nav-link">Inicio</a>
+                </li>
+                <li class="admin-nav-item">
+                    <a href="portfolio.html" class="admin-nav-link">Portfolio</a>
+                </li>
+                <li class="admin-nav-item">
+                    <a href="services.html" class="admin-nav-link">Servicios</a>
+                </li>
+                <li class="admin-nav-item">
+                    <a href="contact.html" class="admin-nav-link">Contacto</a>
+                </li>
+            </ul>
+            <div class="admin-user-info">
+                <span class="admin-user-name">Administrador</span>
+                <button class="admin-logout-btn" onclick="logout()">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Form (inicialmente oculto) -->
+    <div class="admin-login-container" id="loginContainer">
+        <div class="admin-login-form">
+            <h2 class="admin-login-title">Acceso Administrador</h2>
+            <form id="loginForm">
+                <div class="admin-form-group">
+                    <label for="adminUsername">Usuario</label>
+                    <input type="text" id="adminUsername" name="username" required>
+                </div>
+                <div class="admin-form-group">
+                    <label for="adminPassword">Contraseña</label>
+                    <input type="password" id="adminPassword" name="password" required>
+                </div>
+                <button type="submit" class="admin-login-btn">Iniciar Sesión</button>
+            </form>
+            <div class="admin-login-error" id="loginError"></div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="admin-dashboard" id="dashboard" style="display: none;">
+        <div class="admin-container">
+            <!-- Header -->
+            <div class="admin-header">
+                <h1 class="admin-title">Panel de Estadísticas</h1>
+                <div class="admin-controls">
+                    <div class="admin-date-filter">
+                        <input type="date" id="startDate" class="admin-date-input">
+                        <span>a</span>
+                        <input type="date" id="endDate" class="admin-date-input">
+                        <button class="admin-filter-btn" onclick="updateStats()">Filtrar</button>
+                    </div>
+                    <button class="admin-export-btn" onclick="exportData()">
+                        <i class="fas fa-download"></i> Exportar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="admin-metrics-grid">
+                <div class="admin-metric-card">
+                    <div class="admin-metric-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="admin-metric-content">
+                        <h3 class="admin-metric-title">Visitas Totales</h3>
+                        <p class="admin-metric-value" id="totalVisits">0</p>
+                        <p class="admin-metric-change positive">+12.5%</p>
+                    </div>
+                </div>
+
+                <div class="admin-metric-card">
+                    <div class="admin-metric-icon">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="admin-metric-content">
+                        <h3 class="admin-metric-title">Clicks Totales</h3>
+                        <p class="admin-metric-value" id="totalClicks">0</p>
+                        <p class="admin-metric-change positive">+8.3%</p>
+                    </div>
+                </div>
+
+                <div class="admin-metric-card">
+                    <div class="admin-metric-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="admin-metric-content">
+                        <h3 class="admin-metric-title">Usuarios Únicos</h3>
+                        <p class="admin-metric-value" id="uniqueUsers">0</p>
+                        <p class="admin-metric-change positive">+15.2%</p>
+                    </div>
+                </div>
+
+                <div class="admin-metric-card">
+                    <div class="admin-metric-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="admin-metric-content">
+                        <h3 class="admin-metric-title">Tiempo Promedio</h3>
+                        <p class="admin-metric-value" id="avgTime">0s</p>
+                        <p class="admin-metric-change negative">-2.1%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="admin-charts-section">
+                <div class="admin-charts-grid">
+                    <!-- Visits Over Time -->
+                    <div class="admin-chart-container">
+                        <h3 class="admin-chart-title">Visitas en el Tiempo</h3>
+                        <div class="admin-chart-wrapper">
+                            <canvas id="visitsChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Page Views -->
+                    <div class="admin-chart-container">
+                        <h3 class="admin-chart-title">Páginas Más Visitadas</h3>
+                        <div class="admin-chart-wrapper">
+                            <canvas id="pagesChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Traffic Sources -->
+                    <div class="admin-chart-container">
+                        <h3 class="admin-chart-title">Fuentes de Tráfico</h3>
+                        <div class="admin-chart-wrapper">
+                            <canvas id="trafficChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Device Types -->
+                    <div class="admin-chart-container">
+                        <h3 class="admin-chart-title">Dispositivos</h3>
+                        <div class="admin-chart-wrapper">
+                            <canvas id="devicesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Click Analysis -->
+            <div class="admin-section">
+                <h2 class="admin-section-title">Análisis de Clicks</h2>
+                <div class="admin-clicks-grid">
+                    <div class="admin-clicks-table-container">
+                        <table class="admin-clicks-table">
+                            <thead>
+                                <tr>
+                                    <th>Elemento</th>
+                                    <th>Página</th>
+                                    <th>Clicks</th>
+                                    <th>Tasa de Conversión</th>
+                                    <th>Tendencia</th>
+                                </tr>
+                            </thead>
+                            <tbody id="clicksTableBody">
+                                <!-- Table content will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="admin-clicks-chart-container">
+                        <h3 class="admin-subtitle">Distribución de Clicks</h3>
+                        <div class="admin-chart-wrapper">
+                            <canvas id="clicksDistributionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Real-time Activity -->
+            <div class="admin-section">
+                <h2 class="admin-section-title">Actividad en Tiempo Real</h2>
+                <div class="admin-real-time-container">
+                    <div class="admin-real-time-stats">
+                        <div class="admin-real-time-item">
+                            <span class="admin-real-time-label">Usuarios Activos</span>
+                            <span class="admin-real-time-value" id="activeUsers">0</span>
+                        </div>
+                        <div class="admin-real-time-item">
+                            <span class="admin-real-time-label">Páginas Vistas</span>
+                            <span class="admin-real-time-value" id="pageViews">0</span>
+                        </div>
+                        <div class="admin-real-time-item">
+                            <span class="admin-real-time-label">Eventos</span>
+                            <span class="admin-real-time-value" id="events">0</span>
+                        </div>
+                    </div>
+                    <div class="admin-real-time-chart">
+                        <canvas id="realtimeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dev-tools-protection" id="devToolsProtection">
+        <div>
+            <h2>Herramientas de Desarrollo Detectadas</h2>
+            <p>Por seguridad, esta página no puede ser inspeccionada mediante herramientas de desarrollo.</p>
+            <button onclick="location.reload()">Recargar Página</button>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="assets/js/admin.js"></script>
+    <script src="assets/js/image-protection.js"></script>
+</body>
+</html>
